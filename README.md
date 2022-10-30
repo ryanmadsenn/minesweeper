@@ -8,7 +8,7 @@ Coding this game provided some unique challenges, such as revealing all adjacent
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the game being played and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/4rxfKshky6w)
 
 # Development Environment
 * Visual Studio Code
