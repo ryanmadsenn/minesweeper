@@ -6,8 +6,6 @@ This is my take on the classic game Minesweeper, written in python. The goal of 
 
 Coding this game provided some unique challenges, such as revealing all adjacent empty spaces when an empty space is clicked. This required a recursive pathfinding algorithm to implement. I wrote this software because I wanted to learn more about object-oriented programming in python.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the game being played and a walkthrough of the code.}
-
 [Software Demo Video](https://youtu.be/4rxfKshky6w)
 
 # Development Environment
