@@ -19,4 +19,4 @@ Coding this game provided some unique challenges, such as revealing all adjacent
 
 # Future Work
 * Better encapsulate classes and change hard-coded values to constants
-* Add win functionality
+* Replace asset paths with dynamic paths for those cloning the repo
