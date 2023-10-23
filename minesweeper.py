@@ -6,7 +6,6 @@ from InputHandler import InputHandler
 
 
 def main():
-
     board = Board()
     clock = Clock()
     video_service = VideoService(board, clock)
@@ -14,8 +13,10 @@ def main():
 
     while True:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT: sys.exit()
-            if event.type == pygame.MOUSEBUTTONDOWN: input_handler.handle_click()
+            if event.type == pygame.QUIT:
+                sys.exit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                input_handler.handle_click()
 
         video_service.draw_board()
         clock.update_time()

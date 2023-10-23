@@ -1,8 +1,8 @@
 from Space import Space
 from Position import Position
 
-class Board():
 
+class Board:
     array = []
     loss = False
     win = False
@@ -26,7 +26,7 @@ class Board():
                 pos = Position(i, i2)
                 space = Space(pos)
                 sub_array.append(space)
-            
+
             self.array.append(sub_array)
 
     def call_count_bombs_around(self):
@@ -34,35 +34,28 @@ class Board():
             for space in sub_array:
                 space.count_bombs_around(self.array)
 
-    
     def count_spaces_cleared(self):
         spaces_cleared = 0
 
         for sub_array in self.array:
             for space in sub_array:
-                if space.clicked == True and space.bomb == False:
+                if space.clicked == True and not space.is_bomb:
                     spaces_cleared += 1
-        
-        return spaces_cleared
 
+        return spaces_cleared
 
     def count_total_bombs(self):
         bombs = 0
 
         for sub_array in self.array:
             for space in sub_array:
-                if space.bomb == True:
+                if space.is_bomb:
                     bombs += 1
-        
+
         return bombs
 
-    
     def show_all_bombs(self):
         for sub_array in self.array:
             for space in sub_array:
-                if space.bomb == True:
+                if space.is_bomb:
                     space.clicked = True
-
-    
-
-       
