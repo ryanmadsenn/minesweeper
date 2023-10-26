@@ -7,7 +7,7 @@ class VideoService:
     clock = None
     screen = None
 
-    size = width, height = 400, 450
+    size = (400, 450)
     black = 0, 0, 0
 
     font = None
@@ -17,6 +17,7 @@ class VideoService:
     frowney = None
     is_bomb = None
     flag = None
+    __path__ = os.path.dirname(os.path.abspath(__file__))
 
     def __init__(self, board, clock):
         self.board = board
@@ -29,17 +30,16 @@ class VideoService:
         pygame.display.set_caption("Minesweeper")
 
         self.font = pygame.font.Font(
-            "/Users/ryanmadsen/code/python/minesweeper/VCR_OSD_MONO_1.001.ttf",
+            f"{self.__path__}/VCR_OSD_MONO_1.001.ttf",
             self.font_size,
         )
         self.load_images()
 
     def load_images(self):
-        __path__ = os.path.dirname(os.path.abspath(__file__))
-        self.smiley = pygame.image.load(f"{__path__}/images/smiley.png")
-        self.frowney = pygame.image.load(f"{__path__}/images/omg.png")
-        self.is_bomb = pygame.image.load(f"{__path__}/images/bomb.png")
-        self.flag = pygame.image.load(f"{__path__}/images/flag.png")
+        self.smiley = pygame.image.load(f"{self.__path__}/images/smiley.png")
+        self.frowney = pygame.image.load(f"{self.__path__}/images/omg.png")
+        self.is_bomb = pygame.image.load(f"{self.__path__}/images/bomb.png")
+        self.flag = pygame.image.load(f"{self.__path__}/images/flag.png")
 
     def draw_board(self):
         self.screen.fill(self.black)
